@@ -1,4 +1,18 @@
+# Terrain Recognition for Time Series Data
 
+## Context:
+Human locomotion naturally exhibits attributes of energy efficiency, stability, adaptability to the environment, and robustness. However, individuals with lower limb amputations experience a disruption in this inherent capability, necessitating the use of prosthetic devices to restore basic walking functionality. In the realm of lower-limb robotic prosthetics, incorporating context awareness holds significant potential to enhance the comfort and safety of amputees. 
+
+This research endeavor aims to develop a terrain identification system utilizing data streams from inertial measurement units (IMUs) positioned on the lower limb. While existing prosthetic leg systems typically rely on a combination of visual and inertial sensors, our investigation seeks to evaluate the viability of terrain identification based solely on inertial data, excluding visual input. By discerning distinct terrain types through this information, the control mechanisms of robotic prosthetic legs can be dynamically adjusted to accommodate changes in the surrounding environment.
+
+## Data:
+Here is a brief description of the data:
+- "_x" files contain the xyz accelerometers and xyz gyroscope measurements from the lower limb.
+- "_x_time" files contain the time stamps for the accelerometer and gyroscope measurements. The units are in seconds and the sampling rate is 40 Hz.
+- "_y" files contain the labels. (0) indicates standing or walking in solid ground, (1) indicates going down the stairs, (2) indicates going up the stairs, and (3) indicates walking on grass.
+- "_y_time" files contain the time stamps for the labels. The units are in seconds and the sampling rates is 10 Hz.
+
+Detailed Dataset available here: https://ieee-dataport.org/open-access/lower-limb-prostheses-environmental-context-dataset
 
 ## Preprocessing Data
 The first step in the code is preprocessing the data into X, Y, and Z coordinates. This is done to ensure that the data is in a format that can be easily used for further analysis.
