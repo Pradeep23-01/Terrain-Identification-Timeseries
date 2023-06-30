@@ -23,6 +23,7 @@ Next, a windowing function is applied to the preprocessed data. This is done to 
 ## Train Test Split
 The preprocessed and windowed data is then split into training and testing sets. This is done to ensure that the model is trained on a subset of the data and tested on another subset, in order to prevent overfitting.
 
+# Time Series Classification:
 ## Model Training and Evaluation
 After the data has been split, a machine learning model is trained on the training set. The model is then evaluated on the testing set to determine its accuracy, f1-score and performance.
 
@@ -32,6 +33,25 @@ Once the model has been trained and evaluated, it is used to make predictions on
 ## Verification of Shapes of Predictions
 Finally, the shapes of the predictions made by the model are verified. This is done to ensure that the predicted values are in the correct format and can be easily interpreted for further analysis.
 
-The Verified predictions are submitted for test scores.
+# Time Series Forecasting:
+For the same data we can forecast the data 
+
+These are some Time series model used in this work:
+
+- **VAR (Vector Autoregression)**:
+VAR is a statistical model used to analyze the relationship between multiple time series variables. It is an extension of the autoregressive (AR) model that considers the dependencies among multiple variables. In VAR, each variable in the system is regressed on its own lagged values and the lagged values of all other variables in the system. VAR models are widely used for forecasting and analyzing the dynamic interactions between variables in economic, financial, and social sciences.
+
+- **CNN 1D (Convolutional Neural Network 1D)**:
+CNN 1D is a type of convolutional neural network specifically designed for processing one-dimensional sequential data such as time series. Unlike traditional CNNs used for image analysis, CNN 1D applies one-dimensional convolutions and pooling operations over the input data. The convolutional layers in a CNN 1D capture local patterns and features in the time series data, while the pooling layers downsample the data and extract the most salient features. CNN 1D models have been successfully applied to various time series tasks such as speech recognition, signal processing, and anomaly detection.
+
+In the realm of time series data analysis, LSTM (Long Short-Term Memory) models have proven to be effective in capturing long-term dependencies and sequential patterns. When it comes to leveraging LSTM for time series data, three notable variations. Let's explore each of these variations in the context of the provided inputs and conditions.
+
+- **Multi-input LSTM**: The Multi-input LSTM extends the traditional LSTM architecture by incorporating multiple input streams. In this case, the inputs consist of two components: class information and the time series data. By combining these inputs, the Multi-input LSTM can learn from both the class-specific features and the temporal dynamics of the time series. This variation allows the model to capture the relationship between the class variable and the corresponding time series patterns, enabling more accurate predictions and analysis.
+
+- **Conditional LSTM**: The Conditional LSTM introduces the concept of conditioning into the LSTM framework, where the model's predictions are conditioned on a specific variable. In this scenario, the LSTM is conditioned on the class variable. By incorporating the class variable as a conditioning factor, the Conditional LSTM can tailor its predictions based on the given class information. This variation is particularly useful when different classes exhibit distinct patterns in the time series data, allowing the model to adapt its predictions based on the specific class context.
+
+- **Attention-based LSTM** : The Attention mechanism, when combined with LSTM, allows the model to focus on relevant information by assigning varying levels of importance to different components of the input sequence. In the context of the provided inputs, the Attention-based LSTM utilizes attention mechanisms not only on the time series data but also on the class variable. By attending to the class variable, the model can dynamically weigh its influence on the predictions, effectively capturing the class-specific patterns in the time series data.
+
+By incorporating these variations of LSTM models - Multi-input LSTM, Conditional LSTM, and Attention-based LSTM - into time series analysis, we can harness the potential of LSTM for capturing complex dependencies and leveraging additional information such as class variables. These variations provide flexibility in modeling time series data by incorporating class-specific features, conditioning on relevant variables, and applying attention mechanisms to focus on important components. 
 
 Overall, the code in this file provides a comprehensive pipeline for preprocessing, modeling, and evaluating human activity recognition data.
